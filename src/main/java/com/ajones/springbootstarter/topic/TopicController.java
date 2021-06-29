@@ -12,27 +12,27 @@ public class TopicController {
     private TopicService topicService;
 
     @RequestMapping("/topics") // GET METHOD 1
-    public List<Topic> getAllTopics(){
+    public List<Topic> getAllTopics() {
         return topicService.getAllTopics();
     }
 
     @RequestMapping("/topics/{id}") // GET METHOD 2
-    public Topic getTopic(@PathVariable String id){
+    public Topic getTopic(@PathVariable String id) {
         return topicService.getTopic(id);
     }
 
     @PostMapping("/topics") // POST METHOD
-    public void addTopic(@RequestBody Topic topic){
+    public void addTopic(@RequestBody Topic topic) {
         topicService.addTopic(topic);
     }
 
     @PutMapping("/topics/{id}") // PUT METHOD
-    public void updateTopic(@RequestBody Topic topic, @PathVariable String id){
+    public void updateTopic(@RequestBody Topic topic, @PathVariable String id) {
         topicService.updateTopic(id, topic);
     }
 
     @DeleteMapping("/topics/{id}") // DELETE METHOD
-    public void deleteTopic(@RequestBody Topic topic, @PathVariable String id){
+    public void deleteTopic(@RequestBody Topic topic, @PathVariable String id) {
         topicService.deleteTopic(id, topic);
     }
 }

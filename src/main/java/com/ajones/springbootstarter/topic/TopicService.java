@@ -14,21 +14,21 @@ public class TopicService {
             new Topic("java", "Core Java", "Core Java description"),
             new Topic("javascript", "Javascript", "Javascript description")));
 
-    public List<Topic> getAllTopics(){
+    public List<Topic> getAllTopics() {
         return topics;
     }
 
-    public Topic getTopic(String id){
+    public Topic getTopic(String id) {
         return topics.stream().filter(t -> t.getId().equals(id)).findFirst().get();
     }
 
-    public void addTopic(Topic topic){
+    public void addTopic(Topic topic) {
         topics.add(topic);
     }
 
     public void updateTopic(String id, Topic topic) {
-        for(Topic t : topics){
-            if (t.getId().equals(id)){
+        for (Topic t : topics) {
+            if (t.getId().equals(id)) {
                 topics.set(topics.indexOf(t), topic);
                 return;
             }
@@ -36,8 +36,8 @@ public class TopicService {
     }
 
     public void deleteTopic(String id, Topic topic) {
-        for(Topic t : topics){
-            if(t.getId().equals(id)){
+        for (Topic t : topics) {
+            if (t.getId().equals(id)) {
                 topics.remove(t);
                 return;
             }

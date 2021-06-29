@@ -14,8 +14,6 @@ public class Topic {
         this.description = description;
     }
 
-
-
     public String getId() {
         return id;
     }
